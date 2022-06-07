@@ -1,0 +1,29 @@
+{
+  "name": "collector",
+  "version": "1.0.0",
+  "description": "## 需要考虑的问题 1. 多语言并行问题 2. 多表并行问题 3. 一个网站只需要一个测试文件，而不是多个",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenguang-chang/collector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenguang-chang/collector/issues"
+  },
+  "homepage": "https://github.com/wenguang-chang/collector#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.2"
+  },
+  "dependencies": {
+    "cos-nodejs-sdk-v5": "^2.11.9",
+    "dotenv": "^16.0.1",
+    "md5": "^2.3.0",
+    "moment": "^2.29.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+  }
+}
