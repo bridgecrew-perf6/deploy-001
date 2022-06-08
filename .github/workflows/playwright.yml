@@ -1,7 +1,9 @@
 name: playwright
 on:
   schedule:
-    - cron: '*/7 * * * *'
+    - cron: '*/6 * * * *'
+  push:
+    branches: [ main, master ]
 jobs:
   test:
     timeout-minutes: 60
