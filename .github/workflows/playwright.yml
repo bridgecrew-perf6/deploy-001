@@ -1,9 +1,10 @@
 name: playwright
 on:
-  schedule:
-    - cron: '*/6 * * * *'
   push:
-    branches: [ main, master ]
+    branches: [ main ]
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
 jobs:
   test:
     timeout-minutes: 60
