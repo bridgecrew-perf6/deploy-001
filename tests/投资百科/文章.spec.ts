@@ -191,7 +191,7 @@ test(`文章内容`, async ({ page }) => {
             let 文章实体 = await postModel.findByPk(post.id);
             for(let i = 0 ; i< 10; i++){
                 await  options.page.evaluate(function(){
-                    window.scrollTo(0, document.body.scrollHeight);
+                    window.scrollTo(0, 50);
                 });
                 await sleep(2000)
             }
