@@ -23,7 +23,7 @@ export enum 翻译方式 {
 }
 
 export function 获取网址(网址: string, 源语言: string, 目标语言: string) {
-
+  return 网址;
   if (源语言 === 目标语言) {
     return 网址;
   }
