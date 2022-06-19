@@ -10,6 +10,7 @@ import TencentCos from '../../库/TencentCos';
 import { 标签模型 } from '../../数据模型/标签模型';
 import { generateId } from '../../库/id';
 import { 标签文章模型 } from '../../数据模型/标签文章模型';
+import { sleep } from '../../库/playwright';
 
 
 async function 抓取前需要运行的代码 (page: any) {
@@ -187,6 +188,13 @@ test(`文章内容`, async ({ page }) => {
                 允许注入脚本: false,
             })
             let 文章实体 = await postModel.findByPk(post.id);
+            for(let i = 0 ; i< 10; i++){
+                await  options.page.evaluate(function(){
+                    window.scrollTo(0, document.body.scrollHeight);
+                });
+                await sleep(2000)
+            }
+          
             let 抓取结果 = await 获取文章页面数据(options);
             console.log(999, 抓取结果)
             // try {
