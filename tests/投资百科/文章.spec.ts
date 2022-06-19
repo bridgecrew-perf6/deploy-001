@@ -15,25 +15,26 @@ import { sleep } from '../../库/playwright';
 
 async function 抓取前需要运行的代码 (page: any) {
     await page.evaluate(() => {
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
-        window.scrollTo(0, document.body.scrollHeight);
+        window.scrollTo(0, 30);
+        window.scrollTo(0, 100);
+        window.scrollTo(0, 150);
+        window.scrollTo(0, 200);
+        window.scrollTo(0, 300);
+        window.scrollTo(0, 350);
+        window.scrollTo(0, 450);
         window.scrollTo(0, document.body.scrollHeight);
     }, []);
 }
 
 function 抓取数据的代码() {
+    window.scrollTo(0, 30);
+    window.scrollTo(0, 100);
+    window.scrollTo(0, 150);
+    window.scrollTo(0, 200);
+    window.scrollTo(0, 300);
+    window.scrollTo(0, 350);
+    window.scrollTo(0, 450);
     window.scrollTo(0, document.body.scrollHeight);
-    window.scrollTo(document.body.scrollHeight, 0);
-    window.scrollTo(0, document.body.scrollHeight);
-    window.scrollTo(document.body.scrollHeight, 0);
-    window.scrollTo(0, document.body.scrollHeight);
-    window.scrollTo(document.body.scrollHeight, 0);
-    window.scrollTo(document.body.scrollHeight, 0);
     //@ts-ignore
     function getAllComments() {
         const t = [],
@@ -169,7 +170,7 @@ test(`文章内容`, async ({ page }) => {
                 //精华页面,讨论页面
                 网址: 获取网址(post.source, LANG_FROM,LANG_TO),
                 抓取函数: 抓取数据的代码,
-                下拉滚动条次数: 10,
+                下拉滚动条次数: 20,
                 onBefore: 抓取前需要运行的代码,
                 waitForSelector: `` ,
                 过滤网络请求: false,
