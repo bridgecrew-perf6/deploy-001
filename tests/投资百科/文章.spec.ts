@@ -170,7 +170,7 @@ test(`文章内容`, async ({ page }) => {
                 抓取函数: 抓取数据的代码,
                 下拉滚动条次数: 10,
                 onBefore: 抓取前需要运行的代码,
-                waitForSelector: `html[lang="${LANG_TO}"]` ,
+                waitForSelector: `` ,
                 过滤网络请求: false,
                 允许注入脚本: false,
             };
